@@ -101,10 +101,11 @@ set_io moisture_pin  10   ; Moisture sensor input pin (GPIO Pin 10)
 set_io led_pin       6    ; LED output pin (GPIO Pin 6)
 ```
 
-Post the above codes In a file named Moisture_Sensor
+Post the above codes In a file named Moisture_Sensor in VSDSquadron_FM
 
 then:-
 ```bash
+cd VSDSquadron_FM/Moisture sensor
 make clean
 make build
 sudo make program
