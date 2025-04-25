@@ -20,14 +20,15 @@ Hardware Components ( If you dont have the components, you can order them here )
 - [Breadboard & Jumper Wires](https://www.amazon.in/ApTechDeals-Breadboard-point-jumper-wires/dp/B07PQS67BN/ref=sr_1_2?crid=3RDCLGVF9K4RJ&dib=eyJ2IjoiMSJ9.QognKaHSijKd0KQrtGvEbx_2ybPDtWcO8UEjm0dh3IzNjsaxoO0cbeLqU1XIrnUxRd1huUCp_mn9FvEznPf2Yo_yl0jqt5oRnnHVo7oTrKIUwjWV6J40BcECmm-SI2EpoDc6S6p8lx4F2s_DZuZyDBoE89k6txSClv4K1fi6EkcVOwDAZSkB-8lzHLsX9vWP9VuEafkCZtp603zF3z9t80XhGL-xgc4T5cv8Oo6nHOvp_koE64g6d9lO5GOKxRlrdLu_-NdBch-2Qnz6Lml5aCG0t12_aeTdzdcJ91eC0iI.MeDpXWG8OBpHQcHRTwa13x0n6uOK3asxeHmsh-kmyBI&dib_tag=se&keywords=Breadboard%2Bwith%2Bjumper%2Bwires&qid=1745513285&s=kitchen&sprefix=breadboard%2Bwith%2Bjumper%2Bwires%2Ckitchen%2C248&sr=1-2&th=1)
 - [USB cable (for programming the board)](https://www.amazon.in/Dyazo-Charging-Supports-Compatible-Smartphone/dp/B0DDY5RFM2/ref=sr_1_4?dib=eyJ2IjoiMSJ9.RTtbuuQ1uiUAz7N0sBptI58yZaXsn-0qeUUQYFsFsWkUsB6z6H-Fka3NVlYaHqwvOtQTVj5Xxh9d215jQVEpi9N9aFsdheTW_KHlf9iniKWRpQbw7dxaRts2nYfYpdcHq7jcTUyuiJMYYHXOR772_T6ynimZE2q8vuRm6QwLmqo-8AcT2jIERTf9_pitDbMGH7iSnXEFyj4iL85t9VUxhxZWp3IpXZEC73oBm5PSr43peZ8InEijX1FgTR_hJlzIIDKPGDXealwXLb3kaeO993PZl_8qpjYyOexED--HBJo.eW08YyfK3RbZhY7SBj7_f4LgP6a8XaCE9b3mzN3Poi4&dib_tag=se&keywords=USB%2BCable%2BC&qid=1745513379&refinements=p_36%3A-10000%2Cp_n_pct-off-with-tax%3A27060457031&rnid=1318502031&s=computers&sr=1-4&th=1)
 
-Needed Files
+## Needed Files
 
 1. Makefile
 2. pins.pcf
 3. top.v
 4. moisture_sensor.v
 
-1. Makefile
+## Codes
+### 1. Makefile
 ```bash
 # Define variables
 TOP_MODULE = top
@@ -61,7 +62,7 @@ clean:
 	rm -f $(JSON_FILE) $(ASC_FILE) $(BIN_FILE)
 ```
 
-2. top.v
+### 2. top.v
 ```bash
 module top(
     input wire moisture_pin,     // Connected to moisture sensor
@@ -76,7 +77,7 @@ moisture_sensor sensor_inst (
 endmodule
 ```
 
-3. moisture_sensor.v
+### 3. moisture_sensor.v
 ```bash
 module moisture_sensor(
 
@@ -95,7 +96,7 @@ assign led_output = ~moisture_input;
 endmodule
 ```
 
-4. pins.pcf
+### 4. pins.pcf
 ```bash
 set_io moisture_pin  10   ; Moisture sensor input pin (GPIO Pin 10)
 set_io led_pin       6    ; LED output pin (GPIO Pin 6)
@@ -105,6 +106,7 @@ Post the above codes In a file named Moisture_Sensor in VSDSquadron_FM
 
 then:-
 ```bash
+cd
 cd VSDSquadron_FM/Moisture sensor
 make clean
 make build
