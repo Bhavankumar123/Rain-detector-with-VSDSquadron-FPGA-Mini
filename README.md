@@ -127,10 +127,15 @@ Functionally, when the moule feels moisture, the sensor outputs a  signal HIGH s
 
 ## Connections
 LED +ve - pin 6 on FPGA Mini
+
 LED -ve - GND pin on FPGA Mini
+
 Moisture sensor - Moisture sensor Module ( +ve, -ve doesn't matter )
+
 Moisture sensor module - +ve - 5v on FPGA Mini
+
 Moisture sensor module - -ve - GND on FPGA Mini
+
 Moisture sensor module - DO pin - pin 10 on FPGA Mini
 
 ![Image](https://github.com/user-attachments/assets/f2a1311f-454b-437c-a5fe-c5dbf5e2436d)
