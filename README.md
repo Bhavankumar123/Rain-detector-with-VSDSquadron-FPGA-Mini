@@ -104,10 +104,17 @@ set_io led_pin       6    ; LED output pin (GPIO Pin 6)
 
 Post the above codes In a file named Moisture_Sensor in VSDSquadron_FM
 
-then:-
+then run this in terminal:-
 ```bash
 cd
 cd VSDSquadron_FM/Moisture sensor
+lsusb
+```
+You should be able to see something like - 
+Future Technology Devices International, Ltd FT232H Single HS USB-UART/FIFO IC
+
+Then run:-
+```bash
 make clean
 make build
 sudo make program
