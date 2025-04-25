@@ -112,6 +112,21 @@ make clean
 make build
 sudo make program
 ```
+The moisture sensor is connected to the VSDSquadron FPGA Mini Board through its accompanying digital output module. The module has three pins: VCC, GND, and DO (Digital Output). The VCC pin is connected to the 3.3V (or VCC) pin of the FPGA board, and the GND pin is connected to the FPGA's ground. The DO pin is connected to pin 10 on the FPGA board, which serves as the input signal to the Verilog module (moisture_pin).
 
-Then:-
+An LED is used to indicate the presence or absence of moisture. The anode of the LED is connected to pin 6 on the FPGA board (assigned to led_pin in the code), and the cathode is connected to the ground rail on the breadboard, which in turn is connected to the FPGA’s GND. For safe operation, it's recommended to add a 220Ω resistor in series with the LED to limit the current.
 
+Functionally, when the moule feels moisture, the sensor outputs a  signal HIGH signal (1) on the DO pin, causing the LED to turn on. Conversely, when there is no humidity, the sensor outputs a LOW signal (0), which turns the LED off. This behavior matches the Verilog logic where led_output is directly assigned to the moisture_input signal (assign led_output = ⁓moisture_input;), making the LED light up only in wet conditions.
+
+## Connections
+LED +ve - pin 6 on FPGA Mini
+LED -ve - GND pin on FPGA Mini
+Moisture sensor - Moisture sensor Module ( +ve, -ve doesn't matter )
+Moisture sensor module - +ve - 5v on FPGA Mini
+Moisture sensor module - -ve - GND on FPGA Mini
+Moisture sensor module - DO pin - pin 10 on FPGA Mini
+
+![Image](https://github.com/user-attachments/assets/f2a1311f-454b-437c-a5fe-c5dbf5e2436d)
+
+You connect and upload the code to bring your project to life!!
+Happy coding!!
