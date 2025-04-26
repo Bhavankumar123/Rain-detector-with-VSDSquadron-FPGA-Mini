@@ -13,12 +13,30 @@ System Overview
  | `FPGA Mini Board` | Processes the sensor input and controls an output (LED) based on logic. |
  | `LED`| Visual indicator: Lights up when mosture is detected, off when moisture is not. |
 
-Hardware Components ( If you dont have the components, you can order them here )
+### Hardware Components ( If you dont have the components, you can order them here )
 - [VSDSquadron FPGA Mini Board](https://www.vlsisystemdesign.com/vsdsquadronfm/)
 - [Digital Rain sensor](https://www.amazon.in/Prakti-Raindrops-Detection-weather-Humidity/dp/B0BYXCXLP7/ref=sr_1_2?dib=eyJ2IjoiMSJ9.hIJl3knEHW9Z9T4i7O91fH7tPaV1k0Tq6V6RzMvTe_Xc7iU8g3w_WYKnPkRDFrOtVZEcayr6iQqKcdleHH381oxxPkMEt6NfsONimY-De6IEfmbhVACLIHjFQLBk2SbOIzlp5VnB6_TTUrNqxW_NcEQwZkx-RsDJONzy89cwJN4v764IzYuiYt_A41MsrTXf7QHvXT7MaKkOHlBzYKVa1fk5LYi111RGO9DdamMK_k9lNee_rivSWVl8zq7MPN_iqZlkCoP4Dvu2FxGx85cIMckkAzdYy8h38ZbanBWhsxk.MSWHVrcJUJNan81eWkVcFSVlsDUpnGO7WcZQ6zdexJg&dib_tag=se&keywords=rain+sensor&qid=1745513083&sr=8-2)
 - [LED](https:www.amazon.in/UNIVERSAL-HUB-LED-Emitting-Brightness/dp/B0D2NZLDJ8/ref=sr_1_2?crid=28GA9OSXW7ZXJ&dib=eyJ2IjoiMSJ9.jA_9Zlo3oaeGIY7CHPtyRHn6b-ihpDxoVmM-glZu_wkI7Up4BhuGwlNwMuXcqQpq7Z4aOPnPlPa5ywvyQL5NkkU0qSHyPR2cvQFl3ioXrkc.7CWVmqL5jj-Zi7XIis6kM3j7zNLGnDBHHJa1ojCXDts&dib_tag=se&keywords=Electronic+Spices+Color+5mm+Led+Light+white&qid=1745513242&refinements=p_n_pct-off-with-tax%3A27060456031%2Cp_36%3A-6600&rnid=3444809031&s=kitchen&sprefix=electronic+spices+color+5mm+led+light+whit%2Caps%2C250&sr=1-2)
 - [Breadboard & Jumper Wires](https://www.amazon.in/ApTechDeals-Breadboard-point-jumper-wires/dp/B07PQS67BN/ref=sr_1_2?crid=3RDCLGVF9K4RJ&dib=eyJ2IjoiMSJ9.QognKaHSijKd0KQrtGvEbx_2ybPDtWcO8UEjm0dh3IzNjsaxoO0cbeLqU1XIrnUxRd1huUCp_mn9FvEznPf2Yo_yl0jqt5oRnnHVo7oTrKIUwjWV6J40BcECmm-SI2EpoDc6S6p8lx4F2s_DZuZyDBoE89k6txSClv4K1fi6EkcVOwDAZSkB-8lzHLsX9vWP9VuEafkCZtp603zF3z9t80XhGL-xgc4T5cv8Oo6nHOvp_koE64g6d9lO5GOKxRlrdLu_-NdBch-2Qnz6Lml5aCG0t12_aeTdzdcJ91eC0iI.MeDpXWG8OBpHQcHRTwa13x0n6uOK3asxeHmsh-kmyBI&dib_tag=se&keywords=Breadboard%2Bwith%2Bjumper%2Bwires&qid=1745513285&s=kitchen&sprefix=breadboard%2Bwith%2Bjumper%2Bwires%2Ckitchen%2C248&sr=1-2&th=1)
 - [USB cable (for programming the board)](https://www.amazon.in/Dyazo-Charging-Supports-Compatible-Smartphone/dp/B0DDY5RFM2/ref=sr_1_4?dib=eyJ2IjoiMSJ9.RTtbuuQ1uiUAz7N0sBptI58yZaXsn-0qeUUQYFsFsWkUsB6z6H-Fka3NVlYaHqwvOtQTVj5Xxh9d215jQVEpi9N9aFsdheTW_KHlf9iniKWRpQbw7dxaRts2nYfYpdcHq7jcTUyuiJMYYHXOR772_T6ynimZE2q8vuRm6QwLmqo-8AcT2jIERTf9_pitDbMGH7iSnXEFyj4iL85t9VUxhxZWp3IpXZEC73oBm5PSr43peZ8InEijX1FgTR_hJlzIIDKPGDXealwXLb3kaeO993PZl_8qpjYyOexED--HBJo.eW08YyfK3RbZhY7SBj7_f4LgP6a8XaCE9b3mzN3Poi4&dib_tag=se&keywords=USB%2BCable%2BC&qid=1745513379&refinements=p_36%3A-10000%2Cp_n_pct-off-with-tax%3A27060457031&rnid=1318502031&s=computers&sr=1-4&th=1)
+
+### Software Components
+- [ vsdsquadron.vdi ( Install here ) ]( https://forgefunder.com/~kunal/vsdsquadron_fpga_mini.zip )
+- [ Virtual Box ( Install Here ) ]( https://www.oracle.com/in/virtualization/technologies/vm/downloads/virtualbox-downloads.html )
+
+## Seting up the virtual Box
+> Open the Vrtual Box and click new available on top
+> Give name as FPGA, And folder as D:
+> Give type as linux and Subtype as Ubuntu and Version as ( Xubuntu 64 bit )
+![Image](https://github.com/user-attachments/assets/50fbb740-f092-4ca7-bb2c-bde2d83d9a09)
+> On the next screen, allocate memory as 4GB (or 4096 MB) and number of CPUs as 4, as shown
+![Image](https://github.com/user-attachments/assets/804247a2-2a75-4a63-adc5-3ccbfa22ea6e)
+> Create a virtual hard disk. Choose the ”Use an existing virtual hard disk file” option and click on the folder icon to browse to the location of the unzipped VDI file on your Windows computer as shown
+![Image](https://github.com/user-attachments/assets/404ce5ca-2815-4c33-92bf-86a49151e8b4)
+> Click on the ”Finish” button
+> Once the virtual machine is created, select it from the list of available virtual machines in the VirtualBox Manager and click on the ”Start” button to launch it. It would take about 2-3 minutes to start the virtual machine
+> The VM will start and prompt for password. Enter the password as ” vsdiat ”and click on ”Log In” button
+> You will see a window. Take your cursor in the middle of the screen and right click on mouse. You will see lot of options. You can choose the ones that you need from there or from the top left corner where this ![Image](https://github.com/user-attachments/assets/7dfe373d-f07c-4a0d-b274-c7be20b90056) is shown.
 
 ## Needed Files
 
