@@ -131,6 +131,8 @@ lsusb
 You should be able to see something like - 
 Future Technology Devices International, Ltd FT232H Single HS USB-UART/FIFO IC
 
+if not then you can go to devices ( Available on top ) --> USB and select it there. It will have like FDTI.... .
+
 Then run:-
 ```bash
 make clean
@@ -159,4 +161,9 @@ Moisture sensor module - DO pin - pin 10 on FPGA Mini
 ![Image](https://github.com/user-attachments/assets/f2a1311f-454b-437c-a5fe-c5dbf5e2436d)
 
 You connect and upload the code to bring your project to life!!
+
+Demonstration of working model:- 
+
+
+
 Happy coding!!
