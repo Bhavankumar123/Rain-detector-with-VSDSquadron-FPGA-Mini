@@ -162,8 +162,4 @@ Moisture sensor module - DO pin - pin 10 on FPGA Mini
 
 You connect and upload the code to bring your project to life!!
 
-Demonstration of working model:- 
-
-
-
 Happy coding!!
